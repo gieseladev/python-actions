@@ -1,4 +1,4 @@
-FROM python:3.6.8-stretch
+FROM python:3.7-stretch
 
 LABEL "version"="1.0.0"
 LABEL "repository"="https://github.com/jefftriplett/python-actions"
