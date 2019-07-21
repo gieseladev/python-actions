@@ -13,18 +13,18 @@ workflow "Build and Test" {
 }
 
 action "Build" {
-  uses = "jefftriplett/python-actions@master"
+  uses = "gieseladev/python-actions@3.7"
   args = "pip install -r requirements.txt"
 }
 
 action "Lint" {
-  uses = "jefftriplett/python-actions@master"
+  uses = "gieseladev/python-actions@3.7"
   args = "black --check"
   needs = ["Build"]
 }
 
 action "Test" {
-  uses = "jefftriplett/python-actions@master"
+  uses = "gieseladev/python-actions@3.7"
   args = "pytest"
   needs = ["Lint"]
 }
